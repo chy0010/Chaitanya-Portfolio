@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chaitanya's About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link href="https://uploads-ssl.webflow.com/5e2520252e290c852ed89624/5ea8c7cb536b872177ab49d3_Favicon.png"
+    rel="shortcut icon" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto+Serif:opsz,wght@8..144,300&display=swap"
+        rel="stylesheet">
+    <style>
+         .test:hover{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.13), 0 6px 20px 0 rgba(0, 0, 0, 0.13);
+        }
+        .dot {
+            --size: 1000px;
+            display: none;
+            position: absolute;
+            left: calc(var(--size) / 3 * -1);
+            top: calc(var(--size) / 3 * -1);
+            width: var(--size);
+            height: 5000px;
+            mix-blend-mode: soft-light;
+            filter: blur(calc(var(--size) / 6));
+            animation: dot-animation ease-in-out 20s infinite;
+            will-change: transform;
+        }
+
+        @supports (mix-blend-mode: soft-light) and (filter: blur(1px)) {
+            .animatedwrapper {
+                background: none;
+            }
+
+            .dot {
+                display: block;
+            }
+        }
+
+        .dot--one {
+            background: #bd3690;
+        }
+
+        .dot--two {
+            background: #f48937;
+            animation-delay: -7s;
+        }
+
+        .dot--three {
+            background: #ed2a24;
+            animation-delay: -1s;
+        }
+
+        @keyframes dot-animation {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            33% {
+                transform: translate(calc(var(--size) / 1.5), 0);
+            }
+
+            66% {
+                transform: translate(0, calc(var(--size) / 1.5));
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+
+
+        .navbar {
+            margin-top: 20px;
+            border-radius: 50px;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .home-img {
+            width: 30px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 10px;
+        }
+
+        .animatedwrapper {
+            position: absolute;
+            top: -100px;
+            z-index: -1;
+            height: 5000px;
+            isolation: isolate;
+        }
+
+        .grid-container {
+            display: grid;
+
+            grid-template-rows: 300px 500px;
+            grid-template-columns: 1fr 1.5fr 275px;
+            gap: 20px;
+        }
+
+
+
+        .grid-container>div {
+            border-radius: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            background-color: white;
+        }
+
+        .hero-one {
+            grid-area: 1/1/2/3;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Libre Baskerville', serif;
+            font-family: 'Roboto Serif', serif;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-size: 20px;
+            line-height: 56px;
+        }
+
+
+
+
+
+        .hero-two {
+            grid-area: 1/3/2/4;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.13), 0 6px 20px 0 rgba(0, 0, 0, 0.13);
+        }
+
+        .hero-three {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-area: 2/1/3/2;
+            padding-top: 5%;
+        }
+
+
+
+        .hero-four {
+            grid-area: 2/2/3/4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .emoji {
+            position: relative;
+            height: 375px;
+            bottom: 20px;
+            right: 50px;
+        }
+
+        .for-flex {
+            display: flex;
+            height: 900px;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+
+
+
+        .main-word {
+            font-size: 4rem;
+        }
+
+        .curious {
+            margin-top: 30px;
+        }
+
+        .header-education {
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-evenly;
+            align-items: center;
+
+            margin-top: 40px;
+            text-align: center;
+        }
+
+
+        .experience-points {
+            margin-top: 2%;
+            display: flex;
+            flex-direction: column;
+            width: 82%;
+            text-align: justify;
+            height: 180px;
+        }
+
+
+        .main-words {
+            font-size: 1rem;
+            font-weight: bolder;
+        }
+
+        .d-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .d-flex h4 {
+            width: 170px;
+        }
+
+        .hero-four>span:hover,
+        .hero-three>span:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.13), 0 6px 20px 0 rgba(0, 0, 0, 0.13);
+        }
+
+        .gradient-background {
+            background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+            background-size: 180% 180%;
+            animation: gradient-animation 18s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .icon-square {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.75rem;
+        }
+
+        .profile-img {
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .profile {
+            height: 100px;
+            border-radius: 50%;
+        }
+
+
+
+
+
+
+
+        @media(max-width:1200px) {
+
+            .navbar {
+                margin-top: 0px;
+                position: fixed;
+                border-radius: 50px;
+                background-color: white;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            .grid-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .hero-one {
+                display: flex;
+                padding: 20px
+            }
+
+            .main-word {
+                font-size: 45px;
+            }
+
+            .hero-two {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .emoji {
+                position: relative;
+                top: 3%;
+                left: 0.2%;
+            }
+
+            .hero-three {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 20px;
+            }
+
+            .d-flex h4 {
+
+                width: 140px;
+            }
+
+            .animatedwrapper {
+                top: -500px;
+            }
+
+            .dot {
+                --size: 100px;
+            }
+
+            .dot {
+                --size: 600px;
+            }
+
+            .section-2 {
+                margin-top: 950px;
+            }
+        }
+
+        body {
+            height: 1000px !important;
+        }
+    </style>
+</head>
+
+<body class="gradient-background container-fluid">
+    <div class="container">
+        <div class="flex-nav">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+                    <a class="home-img" href="http://127.0.0.1:3000/capston2/index.html"><img src="./Image.png"
+                            height="30px"></a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Resume</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    About
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item"
+                                            href="https://www.linkedin.com/in/chaitanya-krishna-a93a87242">LinkedIn:Chaitanya
+                                            Krishna</a></li>
+                                    <li><a class="dropdown-item" href="#">Chaitanya Krishna Nallanukala</a></li>
+                                    <li><a class="dropdown-item" href="#">cnallanukala@ualr.edu</a></li>
+                                    <li><a class="dropdown-item" href="#">(765)240-3759</a></li>
+
+                                    <li><a class="dropdown-item" href="#"
+                                            class="gradient-background container-fluid"></a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div>
+            <div class="for-flex">
+                <div class="grid-container">
+                    <div class="hero-one">
+                        <div class="heading">
+                            <p><span class="main-word">Why hello there!</span></p>
+
+                        </div>
+                    </div>
+                    <div class="hero-two">
+                        <img class="emoji" src="./Image 2.png">
+                    </div>
+                    <div class="hero-three">
+                        <span
+                            class="badge d-flex align-items-center mt-3 bg-light-subtle border border-light-subtle text-light-emphasis rounded-pill">
+                            <img class="rounded-circle me-2" width="44" height="44" src="./Image 3.png" alt="">
+                            <a class="nav-link active" href="#education">
+                                <h2 class="mt-2 ">About:-</h2>
+                            </a>
+                        </span>
+
+                        <div class="header-education">
+                            <div>
+                                <span class="badge bg-info-subtle border border-info-subtle text-info-emphasis ">
+                                    
+                                    <h4 class="mt-3">Name:Chaitanya Krishna Nallanukala</h4>
+                                    <h4 class="mt-3">Gmail:cnallanukala@ualr.edu</h4>
+                                    <h4 class="mt-3">LinkedIn:chaitanya krishna</h4>
+                                    <h4 class="mt-3">Location:AnyLocation,USA</h4>
+                                    <h4 class="mt-3">Phone:(765)240-3759</h4>
+
+
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-four">
+                        <span
+                            class="badge d-flex align-items-center mt-3 bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">
+                            <img class="rounded-circle me-2" width="44" height="44" src="./Image 4.png" alt="">
+
+                            <a class="nav-link active" href="#experence">
+                                <h2 class="mt-2 ">Projects:-</h2>
+                            </a>
+                        </span>
+
+
+                        <div class="experience-points" >
+                            <h5>• Travel Booking Website-(Angular,APIs).</h5>
+                            <h5>• Personal Finance Tracker-(ReactJS,Nodejs.)</h5>
+                            <h5>• Online Learning Management System-(Angular).</h5>
+                            <h5>• Inventory Management System-(Python,MySQL)</h5>
+                            <h5>• TinDog(Tinder for Dog's)-(HTML5,CSS,JavaScript)</h5>
+                            <h5>• Real-time Weather Application-(JavaScript,API-driven)</h5>
+                            <h5>• Hospital Management System-(Java,Angular & PostgreSQL).</h5>
+                            <h5>• Helpdesk and Ticketing Platform-(PHP,JavaScript & Python).</h5>
+                            
+                            <div class="all-points">
+                                <div class="d-flex  justify-content-center gap-2 py-5">
+                            <h5 class="mt-3"> I have worked on several projects. Please visit my:</h5>   
+                            <a class="nav-link active" href="https://github.com/chy0010">
+                                <span
+                                    class="badge test bg-dark-subtle border border-dark-subtle text-dark-emphasis rounded-pill pt-2">
+
+                                    <h4> GitHub.</h4>
+
+                                </span> </a>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
